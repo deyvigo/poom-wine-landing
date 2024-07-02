@@ -1,4 +1,3 @@
-import { IconBrandFacebookFilled, IconBrandInstagram } from '@tabler/icons-react'
 import { IconFacebook } from './../../components/icons/IconFacebook'
 import { IconInstagram } from '../../components/icons/IconInstagram'
 
