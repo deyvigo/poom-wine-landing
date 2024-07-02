@@ -5,17 +5,25 @@ export const Navbar = () => {
   return (
     <>
       <nav className="w-dvw flex h-[50px] bg-red-400 justify-around items-center">
-        <NavLink to="/" className="font-bold text-xl text-black">
-          <IconFlag className="text-white"/>
+        <NavLink to="/"  className={({isActive}) => {
+          return isActive ? 'text-red-900 border-b-2 border-red-900 w-[25%] justify-center flex items-center h-full' : 'text-white w-[25%] justify-center flex items-center h-full'
+        }}>
+          <IconFlag size={26} className=""/>
         </NavLink>
-        <NavLink to="/vision" className="font-bold text-xl text-black">
-          <IconEye className="text-white"/>
+        <NavLink to="/vision" className={({isActive}) => {
+          return isActive ? 'text-red-900 border-b-2 border-red-900 w-[25%] justify-center flex items-center h-full' : 'text-white w-[25%] justify-center flex items-center h-full'
+        }}>
+          <IconEye size={26} className=""/>
         </NavLink>
-        <NavLink to="/precios" className="font-bold text-xl text-black">
-          <IconMoneybag size={24} className="text-white"/>
+        <NavLink to="/precios" className={({isActive}) => {
+          return isActive ? 'text-red-900 border-b-2 border-red-900 w-[25%] justify-center flex items-center h-full' : 'text-white w-[25%] justify-center flex items-center h-full'
+        }}>
+          <IconMoneybag size={26} className=""/>
         </NavLink>
-        <NavLink to="/map" className="font-bold text-xl text-black">
-          <IconScanPosition size={24} className="text-white"/>
+        <NavLink to="/map" className={({isActive}) => {
+          return isActive ? 'text-red-900 border-b-2 border-red-900 w-[25%] justify-center flex items-center h-full' : 'text-white w-[25%] justify-center flex items-center h-full'
+        }} >
+          <IconScanPosition size={30} className=""/>
         </NavLink>
       </nav>
       <Outlet />
